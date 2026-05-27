@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   font-weight: 400;
   color: var(--color-gold);
-  background-color: rgba(201, 168, 76, 0.05);
+  background-color: #FFFFFF; /* Pure white background to match logo image */
 }
 
 .logo-text {
@@ -1859,7 +1859,7 @@ h1, h2, h3, h4, h5, h6 {
 .brand-logomark {
   width: 42px;
   height: 42px;
-  background-color: rgba(201, 168, 76, 0.08);
+  background-color: #FFFFFF; /* Pure white background to match logo image */
   border: 0.5px solid var(--color-gold);
   color: var(--color-gold);
   font-family: var(--font-headings);
@@ -2553,7 +2553,7 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #0F2E25; /* Solid deep dark Persian green */
+  background-color: #FFFFFF; /* Pure white background for minimal premium luxury look */
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -2597,7 +2597,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   padding: 12px; /* Premium spacing frame */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle premium drop shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Elegant premium drop shadow */
 }
 
 .logo-square img {
@@ -2622,7 +2622,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
   font-weight: 300;
   font-size: 1.5rem;
-  color: #F5F0E8;
+  color: var(--color-near-black); /* Dark green for legible typography */
   letter-spacing: 0.06em;
   margin-top: 1.2rem;
   line-height: 1.2;
@@ -2634,7 +2634,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 9px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: rgba(201, 168, 76, 0.6);
+  color: var(--color-gold); /* Solid gold for clean premium look */
   margin-top: 5px;
   display: block;
 }
@@ -2643,7 +2643,7 @@ h1, h2, h3, h4, h5, h6 {
 .splash-divider {
   width: 40px;
   height: 0.5px;
-  background-color: rgba(201, 168, 76, 0.25);
+  background-color: var(--color-gold); /* Visible gold divider on white */
   margin: 2rem 0;
   opacity: 0;
   animation: dividerEntrance 0.8s ease 1s forwards;
@@ -2660,9 +2660,9 @@ h1, h2, h3, h4, h5, h6 {
 .splash-road {
   width: 100%;
   height: 28px;
-  background-color: #0a2218;
-  border-top: 1px solid rgba(201, 168, 76, 0.12);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  background-color: #FFFFFF; /* Pure white road for minimal aesthetics */
+  border-top: 1px solid rgba(201, 168, 76, 0.35); /* Subtle gold frame lines */
+  border-bottom: 1px solid rgba(201, 168, 76, 0.35);
   position: relative;
   overflow: hidden;
 }
@@ -2674,7 +2674,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
   height: 1.5px;
   width: 40px;
-  background-color: rgba(201, 168, 76, 0.2);
+  background-color: rgba(201, 168, 76, 0.4); /* Gold dashed lines on white */
   animation: roadLineSlide 1.2s linear infinite;
   left: -60px;
 }
@@ -2767,7 +2767,7 @@ h1, h2, h3, h4, h5, h6 {
 .splash-progress-bar {
   width: 100%;
   height: 1.5px;
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(15, 46, 37, 0.08); /* Visible pale green track on white background */
   margin-top: 1.4rem;
   overflow: hidden;
 }
@@ -2786,7 +2786,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 9px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: rgba(201, 168, 76, 0.45);
+  color: rgba(15, 46, 37, 0.6); /* Legible dark green with opacity on white */
   margin-top: 1.4rem;
   opacity: 0;
   animation: textEntrance 0.8s ease 2.8s forwards;
