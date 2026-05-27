@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenthia Exports | Premier Kerala Export House</title>
+  <meta name="description" content="Sourcing and delivering premium Kerala spices, cashews, and black pepper to international markets with purity, precision, and ethical standards.">
+  
+  <!-- Typography: Cormorant Garamond & Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- FULL SCREEN SPLASH LOADER -->
+  <div id="splash-loader" class="splash-container">
+    <div class="splash-content">
+      <!-- 1. LOGO BLOCK -->
+      <div class="splash-logo-block">
+        <div class="logo-square">
+          <!-- LOGO SWAP INSTRUCTIONS:
+            To replace the Z placeholder with the actual logo:
+            Set the src of #logo-img to the uploaded logo file path.
+            Recommended logo size: 72px × 72px or keep the gold square 
+            as a container and place logo image inside it.
+          -->
+          <img id="logo-img" src="./assets/logo.png" alt="Zenthia Spices & Nuts Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span class="logo-fallback" style="display: none;">Z</span>
+        </div>
+        <h2 class="splash-logo-title">Zenthia Exports</h2>
+        <span class="splash-logo-subtitle">Premier Export House · Kerala, India</span>
+      </div>
+
+      <!-- 2. THIN GOLD DIVIDER -->
+      <div class="splash-divider"></div>
+
+      <!-- 3. ROAD & TRUCKS ANIMATION -->
+      <div class="splash-road-container">
+        <div class="splash-road">
+          <!-- Dashed lines -->
+          <div class="road-line line-1"></div>
+          <div class="road-line line-2"></div>
+          <div class="road-line line-3"></div>
+
+          <!-- Truck 1 -->
+          <div class="truck truck-1">
+            <div class="cargo-body">
+              <div class="gold-box box-1"></div>
+              <div class="gold-box box-2"></div>
+              <div class="gold-box box-3"></div>
+              <div class="wheel wheel-1"></div>
+              <div class="wheel wheel-2"></div>
+            </div>
+            <div class="cab">
+              <div class="wheel wheel-3"></div>
+            </div>
+          </div>
+
+          <!-- Truck 2 -->
+          <div class="truck truck-2">
+            <div class="cargo-body">
+              <div class="gold-box box-1"></div>
+              <div class="gold-box box-2"></div>
+              <div class="gold-box box-3"></div>
+              <div class="wheel wheel-1"></div>
+              <div class="wheel wheel-2"></div>
+            </div>
+            <div class="cab">
+              <div class="wheel wheel-3"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. PROGRESS BAR -->
+        <div class="splash-progress-bar">
+          <div class="splash-progress-fill"></div>
+        </div>
+
+        <!-- 5. LOADING TEXT -->
+        <div class="splash-loading-text">Loading experience</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor Elements -->
+  <div id="custom-cursor-dot" class="cursor-dot"></div>
+  <div id="custom-cursor-ring" class="cursor-ring"></div>
+
+  <!-- FIXED NAVIGATION BAR -->
+  <header id="main-header" class="navbar-container">
+    <div class="navbar-wrapper">
+      <!-- Logo & Est. -->
+      <a href="#hero" class="logo-group">
+        <div class="logo-box">Z</div>
+        <div class="logo-text">
+          <span class="logo-title">Zenthia Exports</span>
+          <span class="logo-subtitle">Est. 2010 · Kerala, India</span>
+        </div>
+      </a>
+      
+      <!-- Nav Links -->
+      <nav class="nav-menu">
+        <div class="nav-item dropdown">
+          <a href="#about" class="nav-link dropdown-toggle" id="nav-about-toggle">About Us <span class="arrow">↓</span></a>
+          <div class="dropdown-content">
+            <a href="#our-story">Our Story</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#mission-vision">Mission &amp; Vision</a>
+          </div>
+        </div>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" aria-label="Toggle Navigation menu" id="mobile-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO PAGE -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <canvas id="hero-particles" class="particles-canvas"></canvas>
+    
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag scroll-reveal">Premier Export House · India to the World</div>
+        <h1 class="hero-title scroll-reveal">
+          Deliver <br>
+          the <span class="italic-gold">Peak.</span>
+        </h1>
+        <p class="hero-desc scroll-reveal">
+          From local craftsmanship to global markets — we customize, care, pack, and export with uncompromising excellence. Whatever you need. Wherever you are.
+        </p>
+        <div class="hero-actions scroll-reveal">
+          <a href="#products" class="btn btn-gold">Explore Ready Inventory</a>
+          <a href="#contact" class="btn btn-ghost">Request Custom Export</a>
+        </div>
+      </div>
+      
+      <!-- SVG Animated Globe -->
+      <div class="hero-globe-container scroll-reveal">
+        <svg id="animated-globe" viewBox="0 0 800 600" class="globe-svg">
+          <!-- Starry/Particle Background under Globe -->
+          <g class="globe-grid">
+            <!-- Latitude Lines -->
+            <path d="M 100 300 Q 400 150 700 300" stroke="rgba(201, 168, 76, 0.12)" fill="none" stroke-width="0.5" />
+            <path d="M 150 200 Q 400 80 650 200" stroke="rgba(201, 168, 76, 0.08)" fill="none" stroke-width="0.5" />
+            <path d="M 150 400 Q 400 520 650 400" stroke="rgba(201, 168, 76, 0.08)" fill="none" stroke-width="0.5" />
+            <!-- Longitude Lines -->
+            <path d="M 400 100 Q 200 300 400 500" stroke="rgba(201, 168, 76, 0.12)" fill="none" stroke-width="0.5" />
+            <path d="M 400 100 Q 300 300 400 500" stroke="rgba(201, 168, 76, 0.08)" fill="none" stroke-width="0.5" />
+            <path d="M 400 100 Q 500 300 400 500" stroke="rgba(201, 168, 76, 0.08)" fill="none" stroke-width="0.5" />
+            <path d="M 400 100 Q 600 300 400 500" stroke="rgba(201, 168, 76, 0.12)" fill="none" stroke-width="0.5" />
+            <line x1="100" y1="300" x2="700" y2="300" stroke="rgba(201, 168, 76, 0.15)" stroke-width="0.5" />
+            <line x1="400" y1="100" x2="400" y2="500" stroke="rgba(201, 168, 76, 0.15)" stroke-width="0.5" />
+          </g>
+          
+          <!-- Globe Outline Outer Ring -->
+          <circle cx="400" cy="300" r="220" stroke="rgba(201, 168, 76, 0.2)" fill="none" stroke-width="0.5" />
+
+          <!-- Simplified Continent Outlines (Elegant Vectors) -->
+          <!-- India Area -->
+          <path class="landmass" d="M 410 320 Q 425 295 440 290 Q 450 300 455 315 L 435 345 Z" fill="none" stroke="rgba(245, 240, 232, 0.2)" stroke-width="0.5" />
+          <!-- Middle East -->
+          <path class="landmass" d="M 330 280 Q 365 270 380 295 Q 365 310 350 320 Z" fill="none" stroke="rgba(245, 240, 232, 0.1)" stroke-width="0.5" />
+          <!-- Europe / Africa -->
+          <path class="landmass" d="M 220 220 Q 280 210 320 240 Q 300 310 260 380 Q 220 420 230 460 Q 200 440 180 320 Z" fill="none" stroke="rgba(245, 240, 232, 0.08)" stroke-width="0.5" />
+          <!-- Americas (Left edge) -->
+          <path class="landmass" d="M 120 180 Q 150 200 130 290 Q 160 350 145 420" fill="none" stroke="rgba(245, 240, 232, 0.06)" stroke-width="0.5" />
+          <!-- East Asia -->
+          <path class="landmass" d="M 480 220 Q 550 215 580 260 Q 560 310 520 340 L 470 320 Z" fill="none" stroke="rgba(245, 240, 232, 0.1)" stroke-width="0.5" />
+
+          <!-- TARGET NODES -->
+          <!-- Origin: Kerala, India -->
+          <g id="node-india" class="globe-node source">
+            <circle cx="430" cy="330" r="5" fill="#C9A84C" />
+            <circle cx="430" cy="330" r="14" class="ping-ring" stroke="#C9A84C" stroke-width="0.5" fill="none" />
+          </g>
+
+          <!-- Middle East (Dubai) -->
+          <g id="node-dubai" class="globe-node target">
+            <circle cx="365" cy="295" r="3" fill="#F5F0E8" />
+            <circle cx="365" cy="295" r="9" class="ping-ring delay-1" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
+          </g>
+          
+          <!-- Europe (London) -->
+          <g id="node-london" class="globe-node target">
+            <circle cx="280" cy="225" r="3" fill="#F5F0E8" />
+            <circle cx="280" cy="225" r="9" class="ping-ring delay-2" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
+          </g>
+          
+          <!-- Americas (New York) -->
+          <g id="node-ny" class="globe-node target">
+            <circle cx="150" cy="250" r="3" fill="#F5F0E8" />
+            <circle cx="150" cy="250" r="9" class="ping-ring delay-3" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
+          </g>
+
+          <!-- East Asia (Tokyo) -->
+          <g id="node-tokyo" class="globe-node target">
+            <circle cx="560" cy="245" r="3" fill="#F5F0E8" />
+            <circle cx="560" cy="245" r="9" class="ping-ring delay-1" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
+          </g>
+
+          <!-- Southeast Asia (Singapore) -->
+          <g id="node-singapore" class="globe-node target">
+            <circle cx="490" cy="370" r="3" fill="#F5F0E8" />
+            <circle cx="490" cy="370" r="9" class="ping-ring delay-2" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
+          </g>
+
+          <!-- PULSING TRADE ROUTE PATHS (Dotted SVG Lines) -->
+          <!-- India to Dubai -->
+          <path d="M 430 330 Q 395 305 365 295" class="trade-route route-1" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
+          
+          <!-- India to London -->
+          <path d="M 430 330 Q 360 250 280 225" class="trade-route route-2" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
+          
+          <!-- India to New York -->
+          <path d="M 430 330 Q 280 240 150 250" class="trade-route route-3" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
+          
+          <!-- India to Tokyo -->
+          <path d="M 430 330 Q 500 270 560 245" class="trade-route route-4" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
+
+          <!-- India to Singapore -->
+          <path d="M 430 330 Q 460 360 490 370" class="trade-route route-5" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Bottom Left Discover Scroll Indicator -->
+    <div class="hero-scroll-indicator">
+      <span class="scroll-label">Discover</span>
+      <div class="scroll-track">
+        <div class="scroll-bullet"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: ABOUT US -->
+  <section id="about" class="about-section parallax-container">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1600&auto=format&fit=crop');"></div>
+    <div class="section-overlay dark-overlay"></div>
+    
+    <div class="about-grid container">
+      <!-- Left Philosophy Column -->
+      <div class="about-left scroll-reveal">
+        <span class="section-tag">About Zenthia</span>
+        <h2 class="section-heading">A Premier <br><span class="italic-gold">Export House</span></h2>
+        <p class="philosophical-text">
+          Zenthia Exports is a premier export house dedicated to sourcing and delivering top-tier goods to international markets. Based on a foundation of trust and transparency, we bridge the gap between exceptional local producers and discerning global partners. Every shipment carries not just a product — but a promise of purity, precision, and the highest standards of ethical trade.
+        </p>
+      </div>
+
+      <!-- Right 2x2 Stats Grid -->
+      <div class="about-right scroll-reveal">
+        <div class="stats-grid">
+          <div class="stat-box top-left">
+            <span class="stat-number">80+</span>
+            <span class="stat-label">Countries Served</span>
+          </div>
+          <div class="stat-box top-right">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Years of Excellence</span>
+          </div>
+          <div class="stat-box bottom-left">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Custom Orders</span>
+          </div>
+          <div class="stat-box bottom-right">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Product Categories</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: OUR STORY (Book Component) -->
+  <section id="our-story" class="story-section cream-bg">
+    <div class="container flex-center">
+      <h2 class="center-heading text-dark scroll-reveal">From Local Roots to Global Peaks</h2>
+      
+      <!-- Interactive Book Container -->
+      <div class="book-container scroll-reveal">
+        <div class="book" id="interactive-book">
+          <div class="book-spine"></div>
+          
+          <!-- Spread Page Left -->
+          <div class="book-page page-left" id="page-left-content">
+            <div class="page-inner">
+              <span class="chapter-label" id="lbl-left">Chapter I</span>
+              <h3 class="chapter-title" id="title-left">The Beginning</h3>
+              <p class="chapter-body" id="body-left">
+                Zenthia Exports was born from a simple yet ambitious realization: the world's finest goods often lose their soul by the time they cross an ocean. Founded by a team of visionaries with deep roots in international trade and local craftsmanship, Zenthia was established to prove that premium quality and ethical scale can exist in the same shipment.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Spread Page Right -->
+          <div class="book-page page-right" id="page-right-content">
+            <div class="page-inner">
+              <span class="chapter-label" id="lbl-right">Chapter II</span>
+              <h3 class="chapter-title" id="title-right">The Vision</h3>
+              <p class="chapter-body" id="body-right">
+                Our journey began in the vibrant local markets and fertile landscapes where quality is a matter of tradition, not just a business metric. We saw a gap between the incredible potential of local producers and the rigorous demands of the global market. Zenthia — the Zenith of trade — was created to be that bridge.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Book Navigation -->
+        <div class="book-nav">
+          <button class="btn-book-nav" id="btn-prev" aria-label="Previous Page">← Previous</button>
+          <span class="page-counter" id="book-counter">1 / 3</span>
+          <button class="btn-book-nav" id="btn-next" aria-label="Next Page">Next →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: WHY CHOOSE US -->
+  <section id="why-us" class="why-section dark-bg">
+    <div class="container">
+      <h2 class="center-heading scroll-reveal">The Zenthia Difference</h2>
+      
+      <div class="why-grid">
+        <!-- Card 01 -->
+        <div class="why-card scroll-reveal">
+          <div class="card-num">01</div>
+          <div class="card-icon">
+            <svg class="gold-icon" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" fill="none" stroke="#C9A84C" stroke-width="0.75" />
+              <polyline points="9 11 12 14 16 9" fill="none" stroke="#C9A84C" stroke-width="0.75" />
+            </svg>
+          </div>
+          <h3 class="card-title">Globally Certified Quality</h3>
+          <p class="card-body">
+            We don't just export; we curate. Every product undergoes rigorous quality checks to meet international safety and excellence standards. When you partner with Zenthia, you receive goods that are as reliable as they are premium.
+          </p>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="why-card scroll-reveal">
+          <div class="card-num">02</div>
+          <div class="card-icon">
+            <svg class="gold-icon" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" fill="none" stroke="#C9A84C" stroke-width="0.75" />
+              <path d="M 6 12 Q 12 8 18 12 Q 12 16 6 12" fill="none" stroke="#C9A84C" stroke-width="0.75" />
+              <circle cx="12" cy="12" r="2" fill="#C9A84C" />
+            </svg>
+          </div>
+          <h3 class="card-title">Ethical &amp; Direct Sourcing</h3>
+          <p class="card-body">
+            By cutting out unnecessary layers, we ensure that our local partners and farmers receive fair compensation. Our supply chain is built on the principle of mutual growth, ensuring that your purchase supports sustainable livelihoods at the source.
+          </p>
+        </div>
+
+        <!-- Card 03 -->
+        <div class="why-card scroll-reveal">
+          <div class="card-num">03</div>
+          <div class="card-icon">
+            <svg class="gold-icon" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" fill="none" stroke="#C9A84C" stroke-width="0.75" />
+              <circle cx="10" cy="14" r="2.5" fill="none" stroke="#C9A84C" stroke-width="0.75" />
+              <circle cx="15" cy="10" r="2.5" fill="none" stroke="#C9A84C" stroke-width="0.75" />
+              <line x1="12" y1="12.5" x2="13" y2="11.5" stroke="#C9A84C" stroke-width="0.75" />
+            </svg>
+          </div>
+          <h3 class="card-title">Seamless Logistics &amp; Reliability</h3>
+          <p class="card-body">
+            We understand that timing is everything in global trade. Our streamlined export processes and robust logistics network ensure that your orders arrive fresh, intact, and on schedule, no matter where in the world you are located.
+          </p>
+        </div>
+
+        <!-- Card 04 -->
+        <div class="why-card scroll-reveal">
+          <div class="card-num">04</div>
+          <div class="card-icon">
+            <svg class="gold-icon" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" fill="none" stroke="#C9A84C" stroke-width="0.75" />
+              <polygon points="12 5 15 11 21 11 16 15 18 21 12 17 6 21 8 15 3 11 9 11" fill="none" stroke="#C9A84C" stroke-width="0.75" />
+            </svg>
+          </div>
+          <h3 class="card-title">Pure &amp; Authentic</h3>
+          <p class="card-body">
+            Transparency is our core ingredient. We guarantee 100% authenticity in everything we export — free from adulteration and true to its natural heritage. We bring you the world, exactly as nature intended it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: MISSION, VISION & PROMISE -->
+  <section id="mission-vision" class="mvp-section cream-bg">
+    <div class="container">
+      <h2 class="center-heading text-dark scroll-reveal">Mission, Vision &amp; Promise</h2>
+      
+      <div class="mvp-grid">
+        <!-- Box 1: Mission -->
+        <div class="mvp-box pop-reveal scroll-reveal">
+          <div class="mvp-label">Mission</div>
+          <h3 class="mvp-title">Redefine Global Trade</h3>
+          <div class="mvp-divider"></div>
+          <p class="mvp-body">
+            At Zenthia Exports, our mission is to redefine the global trade landscape by delivering premium, ethically sourced products from the heart of our origins to the international market. We are dedicated to maintaining the highest standards of quality and transparency, ensuring that every shipment carries the promise of excellence and the story of the hands that crafted it.
+          </p>
+        </div>
+
+        <!-- Box 2: Vision -->
+        <div class="mvp-box pop-reveal scroll-reveal">
+          <div class="mvp-label">Vision</div>
+          <h3 class="mvp-title">A Symbol of Trust</h3>
+          <div class="mvp-divider"></div>
+          <p class="mvp-body">
+            To become a globally recognized symbol of trust and quality in the export industry. We strive to empower local producers by providing them a global stage, fostering a world where borders are no barrier to experiencing the finest authentic goods, delivered with integrity and innovation.
+          </p>
+        </div>
+
+        <!-- Box 3: Promise -->
+        <div class="mvp-box pop-reveal scroll-reveal">
+          <div class="mvp-label">Promise</div>
+          <h3 class="mvp-title">Excellence, Always</h3>
+          <div class="mvp-divider"></div>
+          <p class="mvp-body">
+            Every crate that leaves under the Zenthia seal carries an unspoken promise: that what's inside has been sourced with care, packed with precision, and shipped with integrity. We aren't just moving products — we are delivering the peak of human craftsmanship to your doorstep, wherever you are in the world.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: PROCESS (Van Animation) -->
+  <section id="process" class="process-section process-dark-theme">
+    <div class="process-bg-subtle" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1600&auto=format&fit=crop');"></div>
+
+    <div class="container relative-pos">
+      <!-- Heading Block (centered) -->
+      <div class="process-heading-block scroll-reveal">
+        <span class="process-tag-label">How We Work</span>
+        <h2 class="process-main-heading">
+          Four Stages. One Standard. <br>
+          The Zenthia <span class="italic-gold-highlight">Promise.</span>
+        </h2>
+      </div>
+      
+      <!-- Van Track Container -->
+      <div class="track-container scroll-reveal">
+        <div class="track-line"></div>
+        <div id="progress-fill-line" class="progress-fill"></div>
+        <div id="van-icon" class="van-carriage-emoji">🚐</div>
+      </div>
+
+      <!-- 4 Step Columns -->
+      <div class="process-steps">
+        <!-- Step 1 -->
+        <div class="step-column active scroll-reveal" id="step-0" data-index="0">
+          <div class="step-badge">1</div>
+          <div class="step-image-wrap">
+            <img src="./assets/customize.png" alt="We Customize" class="step-image">
+          </div>
+          <h3 class="step-title">We Customize</h3>
+          <span class="step-subtitle">Tailoring every aspect to your specification</span>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-column scroll-reveal" id="step-1" data-index="1">
+          <div class="step-badge">2</div>
+          <div class="step-image-wrap">
+            <img src="./assets/pack.png" alt="We Pack" class="step-image">
+          </div>
+          <h3 class="step-title">We Pack</h3>
+          <span class="step-subtitle">Premium eco-friendly export-grade packaging</span>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-column scroll-reveal" id="step-2" data-index="2">
+          <div class="step-badge">3</div>
+          <div class="step-image-wrap">
+            <img src="./assets/care.png" alt="We Care" class="step-image">
+          </div>
+          <h3 class="step-title">We Care</h3>
+          <span class="step-subtitle">Rigorous quality checks at every stage</span>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-column scroll-reveal" id="step-3" data-index="3">
+          <div class="step-badge">4</div>
+          <div class="step-image-wrap">
+            <img src="./assets/deliver.png" alt="We Deliver" class="step-image">
+          </div>
+          <h3 class="step-title">We Deliver</h3>
+          <span class="step-subtitle">Global logistics, door to door, on time</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: PRODUCTS & FALLING PODS -->
+  <section id="products" class="products-section cream-bg">
+    <!-- Falling Pods Particle Background -->
+    <div id="falling-pods-container" class="falling-pods-wrap"></div>
+    
+    <div class="container relative-pos">
+      <h2 class="center-heading text-dark scroll-reveal">Premium Exports Ready to Ship</h2>
+      
+      <div class="products-grid">
+        <!-- Product 1: Cashews -->
+        <div class="product-card scroll-reveal">
+          <div class="product-image-box">
+            <img src="./assets/product_cashews.png" alt="Cashew Nuts" class="product-photo">
+          </div>
+          <div class="product-info">
+            <span class="product-origin">ORIGIN: KERALA, INDIA · W-GRADE</span>
+            <h3 class="product-name">Cashew Nuts</h3>
+            <p class="product-desc">
+              World-class cashews sourced from the finest coastal farms. Available in multiple export grades from jumbo retail to industry standard.
+            </p>
+            <button class="btn-explore-grades" data-product="cashew">Explore All Grades →</button>
+          </div>
+        </div>
+
+        <!-- Product 2: Black Pepper -->
+        <div class="product-card scroll-reveal">
+          <div class="product-image-box">
+            <img src="./assets/product_pepper.png" alt="Black Pepper" class="product-photo">
+          </div>
+          <div class="product-info">
+            <span class="product-origin">ORIGIN: TELLICHERRY, KERALA · GARBLED GRADE</span>
+            <h3 class="product-name">Black Pepper</h3>
+            <p class="product-desc">
+              The King of Spices. Tellicherry black pepper celebrated globally for its bold aroma, uniform size, and unmatched purity.
+            </p>
+            <button class="btn-explore-grades" data-product="pepper">Explore All Grades →</button>
+          </div>
+        </div>
+
+        <!-- Product 3: Cardamom -->
+        <div class="product-card scroll-reveal">
+          <div class="product-image-box">
+            <img src="./assets/product_cardamom.png" alt="Cardamom Spices" class="product-photo">
+          </div>
+          <div class="product-info">
+            <span class="product-origin">ORIGIN: ALLEPPEY, KERALA · GREEN GRADE</span>
+            <h3 class="product-name">Cardamom</h3>
+            <p class="product-desc">
+              The Queen of Spices. Deep green, highly aromatic Alleppey cardamom in all international export grades.
+            </p>
+            <button class="btn-explore-grades" data-product="cardamom">Explore All Grades →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL ELEMENT FOR GRADES TABLES -->
+  <div id="grades-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="btn-close-modal" aria-label="Close modal">×</button>
+      <div class="modal-header">
+        <span class="modal-tag" id="modal-tag-el">PRODUCT SPECIFICATION</span>
+        <h3 class="modal-title" id="modal-title-el">Cashew Nuts</h3>
+      </div>
+      <div class="modal-body-content">
+        <!-- Tables will be loaded here dynamically by Javascript -->
+        <table class="grades-table" id="grades-table-el">
+          <thead>
+            <tr>
+              <th>Grade Code</th>
+              <th>Size / Format</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody id="grades-table-body">
+            <!-- Dynamic rows -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 9: CONTACT (Light Persian Green, Airy & Clean) -->
+  <section id="contact" class="contact-section-new">
+    <!-- HTML5 Canvas for Animated Green Particle Network -->
+    <canvas id="contact-particles" class="contact-particles-canvas"></canvas>
+    
+    <div class="container relative-pos">
+      <div class="contact-grid-new">
+        <!-- Left: Heading and Info Column (40% width) -->
+        <div class="contact-details-new scroll-reveal">
+          <span class="contact-tag">Get In Touch</span>
+          <h2 class="contact-heading">
+            Request <br>
+            Your <span class="italic-green-highlight">Export.</span>
+          </h2>
+          <div class="heading-subline"></div>
+          
+          <!-- Contact Info List -->
+          <div class="contact-info-list-new">
+            <!-- Row 1: Email -->
+            <div class="info-row-new">
+              <div class="icon-box-new">✉</div>
+              <div class="info-text-new">
+                <span class="info-lbl">Email</span>
+                <a href="mailto:info@zenthiaexports.com" class="info-val-link">info@zenthiaexports.com</a>
+              </div>
+            </div>
+            
+            <!-- Row 2: WhatsApp -->
+            <div class="info-row-new">
+              <div class="icon-box-new">✆</div>
+              <div class="info-text-new">
+                <span class="info-lbl">WhatsApp / Call</span>
+                <div class="info-links-row" style="display: flex; gap: 8px; align-items: center;">
+                  <a href="https://wa.me/917025306759" class="info-val-link" target="_blank" rel="noopener" style="display: inline-block;">+91 70253 06759</a>
+                  <span class="divider-dot" style="color: rgba(245, 240, 232, 0.3); font-size: 10px;">·</span>
+                  <a href="tel:+917025306759" class="info-val-link" style="display: inline-block;">Call Us</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3: Based In -->
+            <div class="info-row-new">
+              <div class="icon-box-new">◎</div>
+              <div class="info-text-new">
+                <span class="info-lbl">Based In</span>
+                <span class="info-val-text">Kozhikode, Kerala, India<br>Exporting worldwide</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="trust-badge-strip">
+            <span>Premium Quality</span>
+            <span class="badge-dot">·</span>
+            <span>Eco Friendly</span>
+            <span class="badge-dot">·</span>
+            <span>Globally Trusted</span>
+          </div>
+        </div>
+
+        <!-- Right: Enquiry Form (55% width) -->
+        <div class="contact-form-box-new scroll-reveal">
+          <!-- Send Method Toggle Switcher -->
+          <div class="form-toggle-bar-new">
+            <button type="button" class="form-toggle-btn-new" id="toggle-whatsapp">📱 WhatsApp</button>
+            <button type="button" class="form-toggle-btn-new active" id="toggle-email">✉ Email</button>
+          </div>
+          
+          <form id="inquiry-form" class="inquiry-form-new">
+            <!-- Row 1: Full Name & Company -->
+            <div class="form-row-new">
+              <div class="form-field-new">
+                <label for="frm-name">Full Name</label>
+                <input type="text" id="frm-name" placeholder="Full name" required>
+              </div>
+              <div class="form-field-new">
+                <label for="frm-company">Company</label>
+                <input type="text" id="frm-company" placeholder="Company name" required>
+              </div>
+            </div>
+            
+            <!-- Row 2: Country & Phone/WhatsApp -->
+            <div class="form-row-new">
+              <div class="form-field-new">
+                <label for="frm-country">Country</label>
+                <input type="text" id="frm-country" placeholder="Your country" required>
+              </div>
+              <div class="form-field-new">
+                <label for="frm-phone">Phone / WhatsApp</label>
+                <input type="tel" id="frm-phone" placeholder="+1 234 567 8900" required>
+              </div>
+            </div>
+
+            <!-- Row 3: Product Required Dropdown -->
+            <div class="form-field-new">
+              <label for="frm-product">Product Required</label>
+              <select id="frm-product" required>
+                <option value="" disabled selected>Select a product...</option>
+                <option value="Cashew Nuts (W210 – W320)">Cashew Nuts (W210 – W320)</option>
+                <option value="Black Pepper (TGSEB / TGEB / MG-1)">Black Pepper (TGSEB / TGEB / MG-1)</option>
+                <option value="Cardamom (AGEB / AGB / AGS)">Cardamom (AGEB / AGB / AGS)</option>
+                <option value="Custom / Other Product">Custom / Other Product</option>
+              </select>
+            </div>
+
+            <!-- Row 4: Grade & Quantity -->
+            <div class="form-field-new">
+              <label for="frm-grade">Grade &amp; Quantity</label>
+              <input type="text" id="frm-grade" placeholder="e.g. W320, 5 metric tons" required>
+            </div>
+
+            <!-- Row 5: Your Requirements Details -->
+            <div class="form-field-new">
+              <label for="frm-reqs">Your Requirements</label>
+              <textarea id="frm-reqs" rows="4" placeholder="Describe your custom export requirements, packaging preferences, destination port, timeline…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-full submit-btn-new">Send Request →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIXED FOOTER (Deep Dark Persian Green #0F2E25) -->
+  <footer class="main-footer-new">
+    <!-- ROW 1: Main Content -->
+    <div class="footer-grid-new">
+      
+      <!-- Column 1: Brand -->
+      <div class="footer-col brand-col">
+        <div class="brand-top">
+          <div class="brand-logomark">Z</div>
+          <span class="brand-title">Zenthia Exports</span>
+        </div>
+        <span class="brand-tagline">Delivering the Peak.</span>
+        <p class="brand-paragraph">
+          Kerala, India — exporting premium goods to 80+ countries with trust, care, and precision.
+        </p>
+        <!-- Social Row -->
+        <div class="social-row-new">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-box" aria-label="LinkedIn">li</a>
+          <a href="https://wa.me/917025306759" target="_blank" rel="noopener" class="social-box" aria-label="WhatsApp">wa</a>
+          <a href="mailto:info@zenthiaexports.com" class="social-box" aria-label="Email">✉</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Navigate -->
+      <div class="footer-col list-col">
+        <span class="col-lbl">Navigate</span>
+        <ul class="col-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#our-story">Our Story</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#mission-vision">Mission &amp; Vision</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Products -->
+      <div class="footer-col list-col">
+        <span class="col-lbl">Products</span>
+        <ul class="col-links">
+          <li><a href="#products">Cashew Nuts</a></li>
+          <li><a href="#products">Black Pepper</a></li>
+          <li><a href="#products">Cardamom</a></li>
+          <li><a href="#contact">Custom Export Request</a></li>
+        </ul>
+        <div class="spec-info-box">
+          <span class="spec-lbl">All grades available</span>
+          <span class="spec-grades">W210 · W320 · TGSEB · AGEB</span>
+        </div>
+      </div>
+
+      <!-- Column 4: Reach Us -->
+      <div class="footer-col list-col contact-col">
+        <span class="col-lbl">Reach Us</span>
+        <ul class="contact-links">
+          <li><span class="tiny-icon">✉</span> info@zenthiaexports.com</li>
+          <li><span class="tiny-icon">✆</span> <a href="tel:+917025306759" style="color: inherit; text-decoration: none;">+91 70253 06759</a></li>
+          <li><span class="tiny-icon">◎</span> Kozhikode, Kerala, India</li>
+        </ul>
+        <div class="pill-badges-row">
+          <div class="pill-badge">Export Certified</div>
+          <div class="pill-badge">Quality Assured</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 2: Thin Divider -->
+    <div class="footer-divider-new"></div>
+
+    <!-- ROW 3: Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="bottom-left">
+        © 2025 Zenthia Exports. All rights reserved.
+      </div>
+      
+      <div class="bottom-center">
+        Premium Quality · Sustainable · Trusted Partners · On-Time · Excellence
+      </div>
+      
+      <div class="bottom-right">
+        <span class="location-text">Kerala, India</span>
+        <span class="divider-dot">·</span>
+        <a href="https://www.instagram.com/intellex.web" target="_blank" rel="noopener" class="dev-link" title="Meet Developers">
+          Meet Developers 
+          <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
