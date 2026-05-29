@@ -2240,10 +2240,12 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Hero adjustments */
   .hero-container {
-    position: relative; /* Create stacking context for background globe */
-    grid-template-columns: 1fr;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 120px 6vw 40px 6vw;
+    padding: 85px 6vw 40px 6vw; /* Reduced top padding to position globe cleanly */
   }
 
   .hero-content {
@@ -2286,16 +2288,18 @@ h1, h2, h3, h4, h5, h6 {
     display: flex !important; /* Show globe on mobile */
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 420px; /* Premium size fitting behind the text */
-    height: 100%;
-    opacity: 0.16; /* Faded watermark styling to ensure hero text stays perfectly legible */
-    pointer-events: none; /* Allow screen interactions to pass through the globe */
-    z-index: 1; /* Position behind text layer */
+    position: relative !important; /* Put back in flow */
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 280px !important; /* Elegant size to fit below nav but above text content */
+    height: 220px !important; /* Defined height to match svg scaling and prevent excessive blank space */
+    opacity: 0.95 !important; /* Bright and clear visible globe on mobile */
+    pointer-events: auto !important; /* Re-enable hover/clicks */
+    z-index: 5 !important;
+    margin-bottom: -10px !important; /* Subtle spacing adjustment to align with tag */
+    order: -1; /* Render globe at the top of hero content */
   }
 
   .hero-scroll-indicator {
