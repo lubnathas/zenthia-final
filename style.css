@@ -798,6 +798,34 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   overflow: hidden;
+  position: relative;
+}
+
+.story-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.story-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* Subtle dark overlay for premium legibility */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.story-section .container {
+  position: relative;
+  z-index: 2;
 }
 
 .book-container {
@@ -976,7 +1004,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .why-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
@@ -1047,7 +1075,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mvp-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
@@ -2227,6 +2255,7 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Hero adjustments */
   .hero-container {
+    position: relative; /* Create stacking context for background globe */
     grid-template-columns: 1fr;
     text-align: center;
     padding: 120px 6vw 40px 6vw;
@@ -2237,6 +2266,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2; /* Force content on top of background globe */
   }
 
   .hero-title {
@@ -2267,7 +2298,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-globe-container {
-    display: none; /* Hide SVG globe on mobile for clean screen size fits */
+    display: flex !important; /* Show globe on mobile */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 420px; /* Premium size fitting behind the text */
+    height: 100%;
+    opacity: 0.16; /* Faded watermark styling to ensure hero text stays perfectly legible */
+    pointer-events: none; /* Allow screen interactions to pass through the globe */
+    z-index: 1; /* Position behind text layer */
   }
 
   .hero-scroll-indicator {
@@ -2590,14 +2633,14 @@ h1, h2, h3, h4, h5, h6 {
 .logo-square {
   width: 160px;
   height: 160px;
-  background-color: #FFFFFF; /* Pure white background */
+  background-color: transparent; /* Seamless blend */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 12px; /* Premium spacing frame */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Elegant premium drop shadow */
+  padding: 0; /* Clear spacing frame */
+  box-shadow: none; /* Clear drop shadow */
 }
 
 .logo-square img {

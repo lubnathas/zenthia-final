@@ -291,32 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       right: {
         chapter: "Chapter II",
-        title: "The Vision",
-        body: "Our journey began in the vibrant local markets and fertile landscapes where quality is a matter of tradition, not just a business metric. We saw a gap between the incredible potential of local producers and the rigorous demands of the global market. Zenthia — the Zenith of trade — was created to be that bridge."
-      }
-    },
-    {
-      left: {
-        chapter: "Chapter III",
         title: "The Network",
         body: "What started as a focused mission to export high-caliber products has evolved into a global network of trust. We don't just move cargo; we curate heritage. By working directly with producers — from the sun-drenched fields to the artisan workshops — we ensure that every product exported under the Zenthia seal maintains its integrity, purity, and story."
-      },
-      right: {
-        chapter: "Chapter IV",
-        title: "The Commitment",
-        body: "Today, Zenthia Exports stands as a testament to the power of connection. We believe that global trade should be a win-win: providing international markets with unparalleled excellence while ensuring our local partners receive the fair value and respect they deserve."
-      }
-    },
-    {
-      left: {
-        chapter: "Chapter V",
-        title: "The Promise",
-        body: "At Zenthia, we aren't just shipping products; we are delivering the peak of human craftsmanship to your doorstep, wherever you are in the world."
-      },
-      right: {
-        chapter: "Chapter VI",
-        title: "The Future",
-        body: "As we look ahead, Zenthia continues to grow its network of trusted producers and global clients — always guided by the same founding principles: authenticity, transparency, and excellence."
       }
     }
   ];
@@ -523,9 +499,9 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: "GREEN GRADE EXPORT SPECIFICATION",
       rows: [
         { code: "Super Bold", size: "8mm+", desc: "The premium tier. Uniform, deep green pods, highly aromatic." },
-        { code: "AGEB", size: "Alleppey Green Extra Bold · 7–8mm+", desc: "Premium quality, highly preferred for large size and aroma. Ideal for Middle Eastern and European markets." },
-        { code: "AGB", size: "Alleppey Green Bold · 6.5–7mm", desc: "Excellent quality, commonly requested in Middle Eastern markets." },
-        { code: "AGS", size: "Alleppey Green Superior · 6mm+", desc: "High quality, often used for industrial consumption or mixed packing." }
+        { code: "Extra Bold", size: "7–8mm+", desc: "Premium quality, highly preferred for large size and aroma. Ideal for Middle Eastern and European markets." },
+        { code: "AGB", size: "6.5–7mm", desc: "Excellent quality, commonly requested in Middle Eastern markets." },
+        { code: "Bold", size: "6mm+", desc: "High quality, often used for industrial consumption or mixed packing." }
       ]
     }
   };
