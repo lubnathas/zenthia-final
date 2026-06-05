@@ -131,9 +131,6 @@
 
   <!-- SECTION 2: HERO PAGE -->
   <section id="hero" class="hero-section">
-    <div class="hero-bg-overlay"></div>
-    <canvas id="hero-particles" class="particles-canvas"></canvas>
-    
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-tag scroll-reveal">Premier Export House · India to the World</div>
@@ -142,100 +139,12 @@
           the <span class="italic-gold">Peak.</span>
         </h1>
         <p class="hero-desc scroll-reveal">
-          From local craftsmanship to global markets — we customize, care, pack, and export with uncompromising excellence. Whatever you need. Wherever you are.
+          From local craftsmanship to global markets, we customize, care, pack, and export with uncompromising excellence. Whatever you need. Wherever you are.
         </p>
         <div class="hero-actions scroll-reveal">
           <a href="#products" class="btn btn-gold">Explore Ready Inventory</a>
-          <a href="#contact" class="btn btn-ghost">Request Custom Export</a>
+          <a href="#contact" class="btn btn-gold">Request Custom Export</a>
         </div>
-      </div>
-      
-      <!-- SVG Animated Globe -->
-      <div class="hero-globe-container scroll-reveal">
-        <svg id="animated-globe" viewBox="0 0 800 600" class="globe-svg">
-          <!-- Starry/Particle Background under Globe -->
-          <g class="globe-grid">
-            <!-- Latitude Lines -->
-            <path d="M 100 300 Q 400 150 700 300" stroke="rgba(201, 168, 76, 0.12)" fill="none" stroke-width="0.5" />
-            <path d="M 150 200 Q 400 80 650 200" stroke="rgba(201, 168, 76, 0.08)" fill="none" stroke-width="0.5" />
-            <path d="M 150 400 Q 400 520 650 400" stroke="rgba(201, 168, 76, 0.08)" fill="none" stroke-width="0.5" />
-            <!-- Longitude Lines -->
-            <path d="M 400 100 Q 200 300 400 500" stroke="rgba(201, 168, 76, 0.12)" fill="none" stroke-width="0.5" />
-            <path d="M 400 100 Q 300 300 400 500" stroke="rgba(201, 168, 76, 0.08)" fill="none" stroke-width="0.5" />
-            <path d="M 400 100 Q 500 300 400 500" stroke="rgba(201, 168, 76, 0.08)" fill="none" stroke-width="0.5" />
-            <path d="M 400 100 Q 600 300 400 500" stroke="rgba(201, 168, 76, 0.12)" fill="none" stroke-width="0.5" />
-            <line x1="100" y1="300" x2="700" y2="300" stroke="rgba(201, 168, 76, 0.15)" stroke-width="0.5" />
-            <line x1="400" y1="100" x2="400" y2="500" stroke="rgba(201, 168, 76, 0.15)" stroke-width="0.5" />
-          </g>
-          
-          <!-- Globe Outline Outer Ring -->
-          <circle cx="400" cy="300" r="220" stroke="rgba(201, 168, 76, 0.2)" fill="none" stroke-width="0.5" />
-
-          <!-- Simplified Continent Outlines (Elegant Vectors) -->
-          <!-- India Area -->
-          <path class="landmass" d="M 410 320 Q 425 295 440 290 Q 450 300 455 315 L 435 345 Z" fill="none" stroke="rgba(245, 240, 232, 0.2)" stroke-width="0.5" />
-          <!-- Middle East -->
-          <path class="landmass" d="M 330 280 Q 365 270 380 295 Q 365 310 350 320 Z" fill="none" stroke="rgba(245, 240, 232, 0.1)" stroke-width="0.5" />
-          <!-- Europe / Africa -->
-          <path class="landmass" d="M 220 220 Q 280 210 320 240 Q 300 310 260 380 Q 220 420 230 460 Q 200 440 180 320 Z" fill="none" stroke="rgba(245, 240, 232, 0.08)" stroke-width="0.5" />
-          <!-- Americas (Left edge) -->
-          <path class="landmass" d="M 120 180 Q 150 200 130 290 Q 160 350 145 420" fill="none" stroke="rgba(245, 240, 232, 0.06)" stroke-width="0.5" />
-          <!-- East Asia -->
-          <path class="landmass" d="M 480 220 Q 550 215 580 260 Q 560 310 520 340 L 470 320 Z" fill="none" stroke="rgba(245, 240, 232, 0.1)" stroke-width="0.5" />
-
-          <!-- TARGET NODES -->
-          <!-- Origin: Kerala, India -->
-          <g id="node-india" class="globe-node source">
-            <circle cx="430" cy="330" r="5" fill="#C9A84C" />
-            <circle cx="430" cy="330" r="14" class="ping-ring" stroke="#C9A84C" stroke-width="0.5" fill="none" />
-          </g>
-
-          <!-- Middle East (Dubai) -->
-          <g id="node-dubai" class="globe-node target">
-            <circle cx="365" cy="295" r="3" fill="#F5F0E8" />
-            <circle cx="365" cy="295" r="9" class="ping-ring delay-1" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
-          </g>
-          
-          <!-- Europe (London) -->
-          <g id="node-london" class="globe-node target">
-            <circle cx="280" cy="225" r="3" fill="#F5F0E8" />
-            <circle cx="280" cy="225" r="9" class="ping-ring delay-2" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
-          </g>
-          
-          <!-- Americas (New York) -->
-          <g id="node-ny" class="globe-node target">
-            <circle cx="150" cy="250" r="3" fill="#F5F0E8" />
-            <circle cx="150" cy="250" r="9" class="ping-ring delay-3" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
-          </g>
-
-          <!-- East Asia (Tokyo) -->
-          <g id="node-tokyo" class="globe-node target">
-            <circle cx="560" cy="245" r="3" fill="#F5F0E8" />
-            <circle cx="560" cy="245" r="9" class="ping-ring delay-1" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
-          </g>
-
-          <!-- Southeast Asia (Singapore) -->
-          <g id="node-singapore" class="globe-node target">
-            <circle cx="490" cy="370" r="3" fill="#F5F0E8" />
-            <circle cx="490" cy="370" r="9" class="ping-ring delay-2" stroke="#F5F0E8" stroke-width="0.5" fill="none" />
-          </g>
-
-          <!-- PULSING TRADE ROUTE PATHS (Dotted SVG Lines) -->
-          <!-- India to Dubai -->
-          <path d="M 430 330 Q 395 305 365 295" class="trade-route route-1" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
-          
-          <!-- India to London -->
-          <path d="M 430 330 Q 360 250 280 225" class="trade-route route-2" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
-          
-          <!-- India to New York -->
-          <path d="M 430 330 Q 280 240 150 250" class="trade-route route-3" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
-          
-          <!-- India to Tokyo -->
-          <path d="M 430 330 Q 500 270 560 245" class="trade-route route-4" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
-
-          <!-- India to Singapore -->
-          <path d="M 430 330 Q 460 360 490 370" class="trade-route route-5" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" fill="none" />
-        </svg>
       </div>
     </div>
 
@@ -272,7 +181,6 @@
       <source src="./assets/lunu.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="story-video-overlay"></div>
 
     <div class="container flex-center">
       <h2 class="center-heading text-dark scroll-reveal">From Local Roots to Global Peaks</h2>

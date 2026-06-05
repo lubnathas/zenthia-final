@@ -320,6 +320,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   letter-spacing: 0.03em;
   line-height: 1.1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .logo-subtitle {
@@ -330,6 +331,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   color: var(--color-gold);
   margin-top: 2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .nav-menu {
@@ -349,6 +351,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding: 8px 0;
   transition: var(--transition-fast);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
 .nav-link::after {
@@ -456,34 +459,18 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   height: 100vh;
   min-height: 700px;
-  background-color: var(--color-near-black);
+  background-image: url('./hero.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   overflow: hidden;
-}
-
-.hero-bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(15,46,37,0.3) 0%, rgba(15,46,37,0.9) 100%);
-  pointer-events: none;
   z-index: 1;
 }
 
-.particles-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .hero-container {
+  position: relative;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
@@ -508,6 +495,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 6px 12px;
   display: inline-block;
   margin-bottom: 24px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(15, 46, 37, 0.15); /* very subtle dark brand background inside the tag border */
 }
 
 .hero-title {
@@ -516,15 +505,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.05;
   margin-bottom: 30px;
   color: var(--color-cream);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-desc {
   font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  font-weight: 200;
-  color: rgba(245, 240, 232, 0.75);
+  font-weight: 300;
+  color: #FFFFFF;
   margin-bottom: 40px;
   max-width: 500px;
   line-height: 1.8;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .hero-actions {
@@ -801,11 +792,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .story-bg-video {
-  display: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  transform: scale(1.08);
+  transform-origin: 20% 20%;
 }
 
-.story-video-overlay {
-  display: none;
+
+#our-story h2.center-heading.text-dark {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.85);
 }
 
 .story-section .container {
@@ -2407,17 +2410,6 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
   }
 
-  .story-video-overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.55); /* Darker elegant overlay for readability on mobile screens */
-    z-index: 1;
-    pointer-events: none;
-  }
 
   /* Why grid padding adjustments to prevent text squishing */
   .why-section {
