@@ -503,6 +503,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { code: "AGB", size: "6.5–7mm", desc: "Excellent quality, commonly requested in Middle Eastern markets." },
         { code: "Bold", size: "6mm+", desc: "High quality, often used for industrial consumption or mixed packing." }
       ]
+    },
+    turmeric: {
+      title: "Turmeric Specifications",
+      tag: "TURMERIC EXPORT SPECIFICATION",
+      rows: [
+        { code: "Alleppey Finger", size: "Curcumin Content: 5%+", desc: "Deep orange-yellow color, highly valued for its rich flavor and medicinal properties." },
+        { code: "Madras Finger", size: "Curcumin Content: 3–3.5%", desc: "Bright yellow color, widely used in culinary applications globally." },
+        { code: "Turmeric Powder", size: "High Purity Ground", desc: "Pure, finely ground turmeric powder with consistent color and active curcumin content." }
+      ]
     }
   };
 

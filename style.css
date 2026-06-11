@@ -898,10 +898,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .chapter-body {
   font-family: var(--font-body);
-  font-weight: 200;
+  font-weight: 500;
   font-size: clamp(0.9rem, 1.2vw, 0.98rem);
   line-height: 1.8;
-  color: rgba(15, 46, 37, 0.75);
+  color: #000000;
 }
 
 /* Page flip 3D transition classes */
