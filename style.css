@@ -11,7 +11,7 @@
   --color-accent-green: #2A6B55;    /* Highlighting/Hover Active State */
   --color-gold: #C9A84C;            /* Primary Accent / Gold Borders */
   --color-light-gold: #E8D08A;      /* Light Gold details */
-  --color-cream: #F5F0E8;           /* Light Section Background */
+  --color-cream: #EAE5DB;           /* Light Section Background (Dark White) */
   --color-white: #FFFFFF;
   --color-dark-transparent: rgba(15, 46, 37, 0.85);
   --color-glass-green: rgba(15, 46, 37, 0.96);
@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .center-heading.text-dark {
-  color: var(--color-near-black);
+  color: #000000;
 }
 
 /* Background Color Sections */
@@ -263,8 +263,10 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: transparent;
-  border-bottom: 0.5px solid transparent;
+  background-color: rgba(15, 46, 37, 0.92); /* Frosted dark green to make navigation always visible */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 0.5px solid rgba(201, 168, 76, 0.2);
   transition: var(--transition-smooth);
 }
 
@@ -467,6 +469,18 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   overflow: hidden;
   z-index: 1;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(15, 46, 37, 0.8) 0%, rgba(15, 46, 37, 0.45) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .hero-container {
@@ -829,7 +843,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   height: 520px;
-  background-color: #FBF9F6;
+  background-color: #E3DDD3; /* Premium dark white paper texture background */
   border: 0.5px solid rgba(15, 46, 37, 0.15);
   box-shadow: 0 20px 60px rgba(15, 46, 37, 0.08); /* Only shadow allowed! */
   display: grid;
@@ -882,7 +896,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 8px;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  color: var(--color-gold);
+  color: #111111; /* Extremely dark grey for readability */
   display: block;
   margin-bottom: 20px;
 }
@@ -890,18 +904,18 @@ h1, h2, h3, h4, h5, h6 {
 .chapter-title {
   font-family: var(--font-headings);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 300;
-  color: var(--color-near-black);
+  font-weight: 400;
+  color: #000000; /* Pure black for readability */
   margin-bottom: 30px;
   line-height: 1.2;
 }
 
 .chapter-body {
   font-family: var(--font-body);
-  font-weight: 200;
+  font-weight: 400;
   font-size: clamp(0.9rem, 1.2vw, 0.98rem);
   line-height: 1.8;
-  color: rgba(15, 46, 37, 0.75);
+  color: #000000;
 }
 
 /* Page flip 3D transition classes */
@@ -1387,7 +1401,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-card {
-  background-color: #FAF8F5;
+  background-color: #EBE6DC; /* Premium dark white background */
   border: 0.5px solid rgba(15, 46, 37, 0.1);
   display: flex;
   flex-direction: column;
@@ -1430,23 +1444,23 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 8px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--color-gold);
+  color: #111111; /* Extremely dark grey for readability */
   margin-bottom: 12px;
 }
 
 .product-name {
   font-size: clamp(1.5rem, 2vw, 1.8rem);
-  font-weight: 300;
-  color: var(--color-near-black);
+  font-weight: 400;
+  color: #000000; /* Pure black for readability */
   margin-bottom: 15px;
 }
 
 .product-desc {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.92rem;
   line-height: 1.7;
-  color: rgba(15, 46, 37, 0.7);
+  color: #000000;
   margin-bottom: 30px;
   flex-grow: 1;
 }

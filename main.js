@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       right: {
         chapter: "Chapter II",
         title: "The Network",
-        body: "What started as a focused mission to export high-caliber products has evolved into a global network of trust. We don't just move cargo; we curate heritage. By working directly with producers — from the sun-drenched fields to the artisan workshops — we ensure that every product exported under the Zenthia seal maintains its integrity, purity, and story."
+        body: "What started as a focused mission to export high caliber products has evolved into a global network of trust. We don't just move cargo; we curate heritage. By working directly with producers, from the sun drenched fields to the artisan workshops, we ensure that every product exported under the Zenthia seal maintains its integrity, purity, and story."
       }
     }
   ];
@@ -478,10 +478,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const gradesData = {
     cashew: {
       title: "Cashew Nuts Specifications",
-      tag: "W-GRADE EXPORT SPECIFICATION",
+      tag: "W GRADE EXPORT SPECIFICATION",
       rows: [
         { code: "W210", size: "Jumbo · 210 nuts/lb", desc: "Premium retail and export. The largest and most prized cashew grade." },
-        { code: "W240", size: "Large · 240 nuts/lb", desc: "High-end snacks; very popular for export. Sought after in Middle Eastern and European markets." },
+        { code: "W240", size: "Large · 240 nuts/lb", desc: "High end snacks; very popular for export. Sought after in Middle Eastern and European markets." },
         { code: "W320", size: "Standard · 320 nuts/lb", desc: "The global industry standard; most widely traded grade." }
       ]
     },
@@ -490,8 +490,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: "GARBLED GRADE EXPORT SPECIFICATION",
       rows: [
         { code: "TGSEB", size: "Tellicherry Garbled Special Extra Bold · 5mm+", desc: "The pinnacle of black pepper grading. Exceptionally large, uniform berries with deep black color and intense aroma." },
-        { code: "TGEB", size: "Tellicherry Garbled Extra Bold · 4.5–5mm", desc: "Extra Bold grade with uniform deep black color. Highly preferred in gourmet and premium spice markets worldwide." },
-        { code: "MG-1", size: "Malabar Garbled · 4–4.5mm", desc: "Standard export grade from the Malabar coast. Clean, machine-graded, widely used for food processing." }
+        { code: "TGEB", size: "Tellicherry Garbled Extra Bold · 4.5 to 5mm", desc: "Extra Bold grade with uniform deep black color. Highly preferred in gourmet and premium spice markets worldwide." },
+        { code: "MG 1", size: "Malabar Garbled · 4 to 4.5mm", desc: "Standard export grade from the Malabar coast. Clean, machine graded, widely used for food processing." }
       ]
     },
     cardamom: {
@@ -499,8 +499,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: "GREEN GRADE EXPORT SPECIFICATION",
       rows: [
         { code: "Super Bold", size: "8mm+", desc: "The premium tier. Uniform, deep green pods, highly aromatic." },
-        { code: "Extra Bold", size: "7–8mm+", desc: "Premium quality, highly preferred for large size and aroma. Ideal for Middle Eastern and European markets." },
-        { code: "AGB", size: "6.5–7mm", desc: "Excellent quality, commonly requested in Middle Eastern markets." },
+        { code: "Extra Bold", size: "7 to 8mm+", desc: "Premium quality, highly preferred for large size and aroma. Ideal for Middle Eastern and European markets." },
+        { code: "AGB", size: "6.5 to 7mm", desc: "Excellent quality, commonly requested in Middle Eastern markets." },
         { code: "Bold", size: "6mm+", desc: "High quality, often used for industrial consumption or mixed packing." }
       ]
     }
